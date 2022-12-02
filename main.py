@@ -21,10 +21,11 @@ from huggingface_hub import login
 from gramformer import Gramformer
 import spacy
 
+spacy.cli.download("en")
 spacy.load("en_core_web_sm")
+
 login(token=st.secrets['huggingface_key'])    
 
-os.system('python -m spacy download en')
 gf = Gramformer(models = 1, use_gpu=False)
 model = whisper.load_model("large")
 
