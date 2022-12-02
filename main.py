@@ -22,7 +22,7 @@ from gramformer import Gramformer
 import spacy
 
 spacy.load("en_core_web_sm")
-login(token="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")
+login(token=st.secrets['huggingface_key'])    
 
 gf = Gramformer(models = 1, use_gpu=False)
 model = whisper.load_model("large")
