@@ -27,7 +27,7 @@ spacy.load("en_core_web_sm")
 login(token=st.secrets['huggingface_key'])    
 
 gf = Gramformer(models = 1, use_gpu=False)
-model = whisper.load_model("medium")
+model = whisper.load_model("small")
 
 def get_analysis():
     pa0 = 'temp2.wav'
